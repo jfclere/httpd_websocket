@@ -5,6 +5,9 @@ http://people.apache.org/~covener/patches/wstunnel-decline.diff
 
 # WebSocket and mod_cluster/mod_proxy
 
+# Test for https://issues.redhat.com/browse/JBCS-1001
+Change WSUpgradeHeader none to WSUpgradeHeader any and use JBCS httpd-2.4.37 SP6
+
 # Test for MODCLUSTER-580 and JBCS-291
 
 See https://issues.redhat.com/browse/JBCS-291 and https://issues.redhat.com/browse/MODCLUSTER-580
