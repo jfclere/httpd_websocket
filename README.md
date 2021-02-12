@@ -4,6 +4,12 @@ If your httpd is older use the patch:
 http://people.apache.org/~covener/patches/wstunnel-decline.diff
 
 # WebSocket and mod_cluster/mod_proxy
+Simple example use:
+```
+ProxyPass "/"  "ws://localhost:8080/"
+ProxyPass "/"  "http://localhost:8080/"
+ProxyPassReverse "/" "http://localhost:8080/"
+```
 
 # Test for https://issues.redhat.com/browse/JBCS-1001
 Change WSUpgradeHeader none to WSUpgradeHeader any and use JBCS httpd-2.4.37 SP6
