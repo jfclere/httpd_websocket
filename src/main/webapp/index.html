@@ -24,7 +24,10 @@
 
             function connect() {
                 var wsProtocol = window.location.protocol == "https:" ? "wss" : "ws";
-                var wsURI = wsProtocol + '://' + window.location.host + window.location.pathname + 'websocket/helloName';
+                var wsPathname = window.location.pathname;
+                <!-- remove index.html in case -->
+                wsPathname = wsPathname.replace('index.html', '');
+                var wsURI = wsProtocol + '://' + window.location.host + wsPathname + 'websocket/helloName';
                 websocket = new WebSocket(wsURI);
 
                 websocket.onopen = function() {
