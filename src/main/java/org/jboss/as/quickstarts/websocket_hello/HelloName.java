@@ -20,6 +20,7 @@ import javax.websocket.CloseReason;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
+import javax.websocket.OnError;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
@@ -40,5 +41,10 @@ public class HelloName {
     @OnClose
     public void helloOnClose(CloseReason reason) {
         System.out.println("WebSocket connection closed with CloseCode: " + reason.getCloseCode());
+    }
+
+    @OnError
+    public void helloOnError(Session session, Throwable errThrowable) {
+        System.out.println("Session " + session.getId() + " error: " + errThrowable.getMessage());
     }
 }
