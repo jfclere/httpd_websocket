@@ -1,3 +1,6 @@
+> [!WARNING]  
+> This repository has been moved to [ci.modcluster.io](https://github.com/modcluster/ci.modcluster.io).
+
 # Web socket and Apache httpd example for various tests.
 Apache httpd since 2.4.44 support since  the proxy check_trans hook that allows a better processing of the websocket upgrades.
 If your httpd is older use the patch:
